@@ -42,16 +42,20 @@ function handleSuccess() {
  * Object recived from Http
  * @param {Object} data Object passed  
  */
-function generateView(data) {   
-    container.innerHTML = 
-        `<div class = "col s4" >${data["description"]} </div>
-            <div class = "col s5" >
-                <img src = "${data["image"]}" alt = "To są bitelsi" >
-            </div> 
-            <div class = "col s3" id = "ciekawostki" >
-                <div>${generatePartialView(data.about)}</div>
-            </div> 
-        `;
+function generateView(data) {
+    if(data){
+        container.innerHTML = 
+            `<div class = "col s4" >${data["description"]} </div>
+                <div class = "col s5" >
+                    <img src = "${data["image"]}" alt = "To są bitelsi" >
+                </div> 
+                <div class = "col s3" id = "ciekawostki" >
+                    <div>${generatePartialView(data.about)}</div>
+                </div> 
+            `;
+    }else{
+        container.innerHTML = `<div>Nie ma takich danych</div>`
+    }   
 }
 /**
  * Object passed by Ajax
