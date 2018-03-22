@@ -1,2 +1,2 @@
 # Album
-Projekt - zadanie  wykonanie albumu przez quantumlab
+Projekt - zadanie  wykonanie albumu dla quantumlab
