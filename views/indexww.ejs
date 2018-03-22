@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="css/materialize.css">
+    <link rel="stylesheet" href="css/main.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+
+<body>
+    <section id="albums">
+        <div class="container">
+            <!-- Albums of the year -->
+            <header id="albumns">
+                <h4>Najlepsze jebie roku <%= year %></h4>
+                <div class="albums row">
+                   <% albumData.forEach(function(item){ %>
+                    <div class="col s3">
+                            <div class="card">
+                                <div class="card-image z-depth-3">
+                                    <img src=" <%= item["image"] %> " />
+                                    <div class="card-title">
+                                        <%= item["title"] %>
+                                        <br>
+                                        <strong>7/10</strong>
+                                        <a href="">More</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    <% }) %>
+                </div>
+            </header>
+            <!-- Details of album -->
+            <div class="row" id="details">
+                <div class="col s8 ">
+                    <div class="card-content z-depth-1">
+                        <h5 class="title">Album miesiąca</h5>
+                        <div class="row d-flex">
+                            <div class="col s3">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores pariatur autem ipsa, optio, assumenda eligendi deleniti
+                                incidunt velit quae reprehenderit fugit, sint quis.
+                            </div>
+                            <div class="col s6">
+                                <img src="img/beachBoys_1960.jpg" alt="To są bitelsi">
+                            </div>
+                            <div class="col s3">
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui eveniet nam reiciendis odit totam nostrum quam suscipit repellendus
+                                pariatur delectus!
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Best albume -->
+                <div class="col s4">
+                    <div class="card-content z-depth-1">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat illo soluta eveniet ipsam libero ea expedita fugit minima
+                        dolorem repudiandae animi qui quasi saepe voluptatibus enim, quia explicabo cum veniam.
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="js/main.js"></script>
+    </section>
+</body>
+
+</html>

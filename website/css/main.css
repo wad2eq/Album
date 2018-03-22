@@ -1,0 +1,43 @@
+/* GLOBAL STYLE */
+html {
+    font-family: GillSans, Calibri, Trebuchet, sans-serif;
+  }
+html, body{
+    background: rgb(224, 224, 224);
+}
+img{
+    width:100%;
+    height: auto;
+}
+.title{
+    margin-bottom:2em;
+}
+.herro{
+    text-transform: uppercase;
+    text-align: center;
+}
+.hidden{
+    display: none;
+}
+/* DESIGN */
+.d-flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#albums .card{
+    box-shadow: 0 0 0 ;
+}
+.card-content{
+    padding: 20px;
+    background: #fff;
+}
+#albums .card-title{
+    background-color: #0201018a;
+    font-size: 1em;
+    text-shadow: 1px 1px 0 #000;
+}
+/* 404 strona */
+#error{
+    margin-top:3em;
+}
