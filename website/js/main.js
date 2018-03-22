@@ -4,12 +4,14 @@ window.onload = function () {
     var albumListTogler = 6;
     var link = document.querySelectorAll("a");
     var showMore = document.getElementById("show");
+    //Add event for ajax requests
     link.forEach(element => {
         element.addEventListener('click', (a) => {
             a.preventDefault();
             loadData(element.getAttribute("href"));
         })
     });
+    //Add event to show more items on the list
     showMore.addEventListener('click', (a)=>{
         a.preventDefault();
         workWithList(0);
@@ -35,19 +37,10 @@ function handleSuccess() {
     const parseData = JSON.parse(this.responseText);
     generateView(parseData);
 }
-
-function handleErrors() {
-    console.log("ups");
-}
-
-function loadData(adress) {
-    const xhr = new XMLHttpRequest();
-    xhr.open('GET', adress, true);
-    xhr.onload = handleSuccess;
-    xhr.onerror = handleErrors;
-    xhr.send();
-}
-
+/**
+ * Object recived from Http
+ * @param {Object} data Object passed  
+ */
 function generateView(data) {   
     container.innerHTML = 
         `<div class = "col s4" >${data["description"]} </div>
@@ -59,10 +52,31 @@ function generateView(data) {
             </div> 
         `;
 }
+/**
+ * Object passed by Ajax
+ * @param {Object} date Part of data from main object 
+ */
 function generatePartialView(date){
     let info = '';
     Object.keys(date).forEach(function(item){
         info += `<div>${item}:  ${date[item]}</div>`;
     });
     return info;
+}
+/**
+ * Ajax eror
+ */
+function handleErrors() {
+    console.log("ups");
+}
+/**
+ * Ajax
+ * @param {Adres URL} adress Adress pased by links
+ */
+function loadData(adress) {
+    const xhr = new XMLHttpRequest();
+    xhr.open('GET', adress, true);
+    xhr.onload = handleSuccess;
+    xhr.onerror = handleErrors;
+    xhr.send();
 }
