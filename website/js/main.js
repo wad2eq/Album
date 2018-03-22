@@ -1,6 +1,7 @@
 var container = document.getElementById("details");
 // container.innerHTML = "";
 window.onload = function () {
+    //Hide elements of Album list
     var albumListTogler = 6;
     var link = document.querySelectorAll("a");
     var showMore = document.getElementById("show");
@@ -14,16 +15,16 @@ window.onload = function () {
     //Add event to show more items on the list
     showMore.addEventListener('click', (a)=>{
         a.preventDefault();
-        workWithList(0);
+        swowAllList(0);
     })
     
-     workWithList(albumListTogler);
+    swowAllList(albumListTogler);
 }
 /**
- *  Metoda extends list of albums       
- * @param {Node list} albumListTogler 
+ *  Metoda shows full list of albums       
+ * @param {Object} albumListTogler Array of nodes <li> 
  */
-function workWithList(albumListTogler){
+function swowAllList(albumListTogler){
     let listItem = document.querySelectorAll(".collection-item");
     for(var i =0; i< listItem.length-albumListTogler; i++ ){
         listItem[i].classList.remove("hidden");
