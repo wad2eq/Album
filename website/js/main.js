@@ -17,14 +17,20 @@ window.onload = function () {
     
      workWithList(albumListTogler);
 }
-
+/**
+ *  Metoda extends list of albums       
+ * @param {Node list} albumListTogler 
+ */
 function workWithList(albumListTogler){
     let listItem = document.querySelectorAll(".collection-item");
     for(var i =0; i< listItem.length-albumListTogler; i++ ){
         listItem[i].classList.remove("hidden");
     }
 }
-
+/**
+ * Ajax succes
+ * Method handle of response from ajax
+ */
 function handleSuccess() {
     const parseData = JSON.parse(this.responseText);
     generateView(parseData);

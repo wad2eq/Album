@@ -5,23 +5,20 @@ const db = fs.readFileSync('./db/albums.json');
 const data = JSON.parse(db);
 //Hold veriables
 let year;
-
+//Data for home page
 function returnDefault() {
     let defaultData = {};
     let list = Object.keys(data);
     year = list[list.length - 1];
     defaultData.year = list[list.length - 1];
     defaultData.albumData = data[list[list.length - 1]];
-    console.dir( defaultData.albumData);
     defaultData.bandList = generataListofBands(list);
-    console.dir( defaultData.bandList);
     return defaultData;
 }
-
+//Data to generate list of albums
 function generataListofBands(list) {
     let bands = [];
     list.forEach(function (item) {
-        console.log(item);
         data[item].forEach(function (obj) {
             bands.push({year: item, band:obj["band"], id:obj["id"]});
         });
