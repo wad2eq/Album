@@ -69,5 +69,5 @@ function sentError(request, response) {
     });
 }
 app.listen(3000, function () {
-    console.log("server działa");
+    console.log("server działa localhost:3000");
 });
