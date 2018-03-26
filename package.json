@@ -1,0 +1,29 @@
+{
+  "name": "album",
+  "version": "1.0.1",
+  "description": "Aplikacja do przeglądania albumów",
+  "main": "app.js",
+  "dependencies": {
+    "ejs": "^2.5.7",
+    "express": "^4.16.3",
+    "materialize-css": "^0.100.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wad2eq/Album.git"
+  },
+  "keywords": [
+    "Album",
+    "node"
+  ],
+  "author": "Mirek",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wad2eq/Album/issues"
+  },
+  "homepage": "https://github.com/wad2eq/Album#readme"
+}

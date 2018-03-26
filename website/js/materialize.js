@@ -40,11 +40,11 @@ if (typeof jQuery === 'undefined') {
   // Preserve the original jQuery "swing" easing as "jswing"
   $.easing['jswing'] = $.easing['swing'];
 
-  var pow = Math.pow,
+  var pow =  Math.pow,
       sqrt = Math.sqrt,
-      sin = Math.sin,
-      cos = Math.cos,
-      PI = Math.PI,
+      sin =  Math.sin,
+      cos =  Math.cos,
+      PI =   Math.PI,
       c1 = 1.70158,
       c2 = c1 * 1.525,
       c3 = c1 + 1,

@@ -56,7 +56,6 @@ function sentAlbums(request, response) {
 app.get('/:api/:id', rest);
 
 function rest(request, response) {
-    console.log("to jest moja lista: " + year);
     //zmienna przechowujaca rok podany w adresie  
     let req = request.params;
     response.send(data[req.api][req.id - 1]);
