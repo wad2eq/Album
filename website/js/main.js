@@ -1,11 +1,24 @@
+
+
+var album = document.querySelectorAll(".album");
+let listItem = document.querySelectorAll(".collection-item");
+//Hide elements of Album list
+var albumListTogler = 6;
+var link = document.querySelectorAll("a");
+var showMore = document.getElementById("show");
+//Add event for ajax requests
+let d = true;
+album.forEach(element => {
+    element.addEventListener('mouseenter', () => {
+        element.classList.add = 'wad';
+        console.log("swa");
+    })
+});
 var container = document.getElementById("details");
 // container.innerHTML = "";
 window.onload = function () {
-    //Hide elements of Album list
-    var albumListTogler = 6;
-    var link = document.querySelectorAll("a");
-    var showMore = document.getElementById("show");
-    //Add event for ajax requests
+
+
     link.forEach(element => {
         element.addEventListener('click', (a) => {
             a.preventDefault();
@@ -15,20 +28,35 @@ window.onload = function () {
     //Add event to show more items on the list
     showMore.addEventListener('click', (a)=>{
         a.preventDefault();
-        swowAllList(0);
+            a.target.classList.add("play");
+            if(d){
+                albumListTogler = 0;
+            }else{
+                albumListTogler = 6;
+            }
+            swowAllList();
+            d=!d;
     })
     
-    swowAllList(albumListTogler);
+    swowAllList();
 }
 /**
  *  Metoda shows full list of albums       
  * @param {Object} albumListTogler Array of nodes <li> 
  */
-function swowAllList(albumListTogler){
-    let listItem = document.querySelectorAll(".collection-item");
-    for(var i =0; i< listItem.length-albumListTogler; i++ ){
-        listItem[i].classList.remove("hidden");
-    }
+function swowAllList(){ 
+    console.log(albumListTogler + " --- " + d);
+    if(d){
+        for(var i =0; i< listItem.length-albumListTogler; i++ ){
+            listItem[i].classList.remove("hidden");
+            listItem[i].classList.add("play");
+        }
+    }else{
+        for(var i =albumListTogler; i< listItem.length; i++ ){
+            listItem[i].classList.add("hidden");
+            listItem[i].classList.add("play");
+        }
+    }  
 }
 /**
  * Ajax succes
@@ -43,13 +71,16 @@ function handleSuccess() {
  * @param {Object} data Object passed  
  */
 function generateView(data) {
+    console.log(data);
     if(data){
         container.innerHTML = 
-            `<div class = "col s4" >${data["description"]} </div>
-                <div class = "col s5" >
-                    <img src = "${data["image"]}" alt = "To są bitelsi" >
+            `<div class = "col s12 m5 r-m-l play" >
+                <p>${data["description"]} </p></div>
+                <div class = "col s12 m7 offset-l1 offset-s0" >
+                    <img src = "${data["image"]}" alt = "${data["band"]} + ${data["title"]}" >
                 </div> 
-                <div class = "col s3" id = "ciekawostki" >
+                <div class = "col s12 m3 l4" id = "ciekawostki" >
+                <strong>Ciekawostki</strong>
                     <div>${generatePartialView(data.about)}</div>
                 </div> 
             `;
@@ -64,7 +95,7 @@ function generateView(data) {
 function generatePartialView(date){
     let info = '';
     Object.keys(date).forEach(function(item){
-        info += `<div>${item}:  ${date[item]}</div>`;
+        info += `<div>${item}: <strong> ${date[item]}</strong></div>`;
     });
     return info;
 }

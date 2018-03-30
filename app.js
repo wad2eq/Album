@@ -13,6 +13,7 @@ function returnDefault() {
     defaultData.year = list[list.length - 1];
     defaultData.albumData = data[list[list.length - 1]];
     defaultData.bandList = generataListofBands(list);
+    console.log(defaultData);
     return defaultData;
 }
 //Data to generate list of albums
@@ -23,7 +24,6 @@ function generataListofBands(list) {
             bands.push({year: item, band:obj["band"], id:obj["id"]});
         });
     })
-    console.dir(bands);
     return bands;
 }
 //
@@ -41,13 +41,14 @@ app.get('/:year', sentAlbums);
 
 function sentAlbums(request, response) {
     //zmienna przechowujaca rok podany w adresie
+    
     year = request.params.year;
     request.params.year;
     if (data[year]) {
         response.render('album', {
             year: year,
             albumData: data[year],
-           bandList: generataListofBands(Object.keys(data))
+            bandList: generataListofBands(Object.keys(data))
                 })
     } else {
         response.render('404');

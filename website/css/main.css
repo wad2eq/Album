@@ -1,43 +1,370 @@
 /* GLOBAL STYLE */
+
 html {
-    font-family: GillSans, Calibri, Trebuchet, sans-serif;
-  }
-html, body{
-    background: rgb(224, 224, 224);
+    font-family: 'Montserrat', Raleway, Calibri, Trebuchet, sans-serif;
+    font-size: 10px;
 }
-img{
-    width:100%;
+
+body {
+    color: rgba(153, 153, 153, 25);
+}
+
+p {
+    font-size: 1.4rem;
+}
+
+.container {
+    max-width: 1100px;
+}
+.wrapper{
+    position: relative;
+}
+strong,
+.title,
+ul.collection li a,
+#show,
+h1,
+h2,
+h3,
+h4 {
+    color: rgba(16, 27, 35, 255);
+}
+
+img {
+    width: 100%;
     height: auto;
 }
-.title{
-    margin-bottom:2em;
+
+.hero {
+    font-size: 1.8rem;
 }
-.herro{
-    text-transform: uppercase;
-    text-align: center;
+
+.title {
+    margin-bottom: 2em;
+    font-size: 2.4rem;
+    font-weight: 700;
 }
-.hidden{
+
+.sub-title span {
+    display: block;
+    font-size: 1rem;
+    line-height: 1.6em;
+    font-weight: 400;
+    color: rgba(153, 153, 153, 25);
+}
+
+.hidden {
     display: none;
+    opacity: 0;
 }
+
+.play {
+    animation: opacity .5s;
+}
+
 /* DESIGN */
-.d-flex{
+
+.r-m-l {
+    margin-left: 0 !important;
+}
+
+.d-flex {
     display: flex;
     justify-content: center;
     align-items: center;
 }
-#albums .card{
-    box-shadow: 0 0 0 ;
+
+.d-flex-2col {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: row;
 }
-.card-content{
-    padding: 20px;
+
+.but {
+    background: #f7f7f7;
+    border-radius: 1.3em;
+    text-align: center;
+    padding: .4em 1em;
+    box-shadow: 0 0 2px #444;
+}
+
+.card-content {
     background: #fff;
 }
-#albums .card-title{
-    background-color: #0201018a;
-    font-size: 1em;
-    text-shadow: 1px 1px 0 #000;
+
+/*
+======================================
+    Style for header
+======================================    
+*/
+
+#albums {
+    margin: 6rem 0;
 }
+
+#albums .card {
+    margin: 0;
+    position: relative;
+    z-index: 20;
+}
+
+#albums .card:hover {
+    -webkit-box-shadow: 0 0 0;
+    box-shadow: 0 0 0;
+    cursor: pointer;
+}
+
+#albums .album .description {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: absolute;
+    z-index: 0;
+    padding: 0 20px;
+    opacity: 0;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    font-size: 1.3rem;
+    line-height: 1.5em;
+    color: #fff;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.600);
+    transition: opacity .25s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+#albums .album:hover .description {
+    opacity: 1;
+}
+
+#albums .album .card-title h4,
+#albums .album .description h4 {
+    color: #f7f7f7;
+    font-size: 1.6rem;
+    font-weight: 500;
+    position: relative;
+}
+
+#albums .album .card-title {
+    background: -moz-linear-gradient( rgba(0, 0, 0, 0), rgb(15, 15, 15));
+    background: -webkit-linear-gradient( rgba(0, 0, 0, 0), rgb(15, 15, 15));
+    background: linear-gradient( rgba(0, 0, 0, 0), rgb(15, 15, 15));
+    font-size: 1.6rem;
+    display: block;
+    width: 100%;
+    padding: 20px 15px;
+}
+
+#albums .album .card-title h4 {
+    margin-bottom: 5px;
+}
+
+/* VOTE */
+
+#albums .album .card-title strong {
+    font-size: 3.5rem;
+    font-weight: 100;
+    color: rgba(193, 193, 193, 255);
+    height: 1em;
+    line-height: 1em;
+}
+
+#albums .album .card-title strong span {
+    font-weight: 600;
+    font-size: 3.7rem;
+    color: #fff;
+}
+
+#albums .album .card-title a {
+    align-self: flex-end;
+    margin-left: auto;
+    margin-bottom: 4px;
+    width: 7.5rem;
+    font-size: 1rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: rgb(36, 36, 36);
+}
+
+/*
+======================================
+    Style for main content - details
+======================================    
+*/
+
+.main {
+    padding: 0 2rem;
+}
+
+#ciekawostki {
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+#ciekawostki>div {
+    margin: 1rem 0;
+}
+
+#ciekawostki>strong {
+    display: block;
+    padding-bottom: .4em;
+    font-weight: 700;
+}
+
+/*
+======================================
+    Style for main sidebar 
+======================================    
+*/
+
+ul.collection {
+    margin: 0;
+    padding: 0 0 20px 0;
+    animation: opacity 2s;
+    transition: all .3s linear;
+    border: none;
+    border-top: 1px solid #e0e0e0;
+}
+
+ul.collection li.collection-item {
+    font-size: 1.4rem;
+}
+
+#show {
+    float: right;
+    padding: .5rem 2rem;
+    font-size: 1rem;
+    text-transform: uppercase;
+    border: none;
+}
+
+#show:focus {
+    background: none;
+}
+
+/*
+======================================
+    Media query
+======================================    
+*/
+
+@media only screen and (max-width: 1300px) {
+    .container {
+        width: 80%;
+    }
+    #albums #score strong,
+    #albums #score strong span {
+        font-size: 2.5rem;
+    }
+}
+
+@media only screen and (max-width: 960px) {
+    .container {
+        width: 100%;
+        padding: 0 2rem;
+    }
+    .description {
+        display: none !important;
+    }
+    .row.d-flex {
+        display: block;
+    }
+    #ciekawostki {
+        text-align: left;
+    }
+}
+
+@media only screen and (max-width: 890px) {
+    #albums #score strong,
+    #albums #score strong span {
+        font-size: 2rem;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    #albums .album .card-title {
+        padding: 10px;
+    }
+    #albums .album .card-title h4 {
+        font-size: 1.4rem;
+    }
+    #score {
+        margin-top: 1rem;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    #albums {
+        margin: .5rem 0;
+    }
+    #albums .album{
+        padding-bottom:1.5rem;
+    }
+    #albums #score strong,
+    #albums #score strong span {
+        font-size: 2.5rem;
+    }
+    .description {
+        display: flex !important;
+    }
+    /*Main  */
+    .main {
+        padding: 0;
+    }
+    .main .title {
+        margin-bottom: 0;
+    }
+    sidebar#slide-out{
+        position: absolute;
+        top:0;
+        left:0px;
+        bottom: 0;
+        box-shadow: #444 0 0 5px;
+    }
+    sidebar#slide-out .title{
+        font-size: 2rem;
+    }
+    sidebar#slide-out .card-content {
+        padding: 0 4rem 2rem;
+    }
+    sidebar#slide-out .card-content .hidden{
+        display: list-item;
+        opacity:1;
+    }
+    sidebar#slide-out .sub-title{
+        margin-bottom: 1rem;
+    }
+    sidebar#slide-out .collection{
+        height: 35rem;
+        overflow:scroll;
+    }
+    #show{
+        display: none;
+    }
+}
+
 /* 404 strona */
-#error{
-    margin-top:3em;
+
+#error {
+    margin-top: 3em;
+}
+
+@keyframes opacity {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes opacityBack {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+        display: none;
+    }
 }

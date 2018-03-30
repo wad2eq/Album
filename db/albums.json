@@ -6,9 +6,9 @@
             "image": "img/beachBoys_1960.jpg",
             "score": "7/10",
             "about": {
-                "relesedAlbums": 200,
-                "time": "45 minuts",
-                "trackNumbers": 12
+                "Sprzedane płyty": 200,
+                "Czas": "45 minuts",
+                "Piosenki": 12
             },
             "description": "This is for the UK release with a different tracklisting than the US version"
         },
@@ -19,9 +19,9 @@
             "image": "img/theBeatles_1960.jpg",
             "score": "7/10",
             "about": {
-                "relesedAlbums": 30000,
-                "time": "45 minuts",
-                "trackNumbers": 10
+                "Sprzedane płyty": 30000,
+                "Czas": "45 minuts",
+                "Piosenki": 10
             },
             "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui eveniet nam reiciendis odit totam nostrum quam suscipit repellendus pariatur delectus!"
         },
@@ -32,9 +32,9 @@
             "image": "img/dylan_1960.jpg",
             "score": "7/10",
             "about": {
-                "relesedAlbums": 20000,
-                "time": "55 minuts",
-                "trackNumbers": 10
+                "Sprzedane płyty": 20000,
+                "Czas": "55 minuts",
+                "Piosenki": 10
             },
             "description": "Revolver is the seventh studio album by the English rock band the Beatles. Released on 5 August 1966, it was the Beatles' final recording project before their retirement as live performers, and marked a progression on their 1965 release Rubber Soul in terms of the group's readiness to experiment in the recording studio. "
         },
@@ -45,9 +45,9 @@
             "image": "img/beachBoys_1960.jpg",
             "score": "7/10",
             "about": {
-                "relesedAlbums": 20000,
-                "time": "45 minuts",
-                "trackNumbers": 12
+                "Sprzedane płyty": 20000,
+                "Czas": "45 minuts",
+                "Piosenki": 12
             },
             "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui eveniet nam reiciendis odit totam nostrum quam suscipit repellendus pariatur delectus!"
         }
@@ -59,9 +59,9 @@
             "image": "img/pingFloyd.jpg",
             "score": "7/10",
             "about": {
-                "relesedAlbums": 2000,
-                "time": "44 minuts",
-                "trackNumbers": 10
+                "Sprzedane płyty": 2000,
+                "Czas": "44 minuts",
+                "Piosenki": 10
             },
             "description": "Please check carefully the existing vinyl releases before adding new releases to the database to avoid duplicates. There are many slightly different versions of this release, and especially the reissues / reprints with black Columbia labels from late 60's to early 70's are hard to tell apart. "
         },
@@ -72,9 +72,9 @@
             "image": "img/NCCP.jpg",
             "score": "7/10",
             "about": {
-                "relesedAlbums": 20000,
-                "time": "45 minuts",
-                "trackNumbers": 12
+                "Sprzedane płyty": 20000,
+                "Czas": "45 minuts",
+                "Piosenki": 12
             },
             "description": "The Nuova Compagnia di Canto Popolare was originally a folk group, formed in Naples in 1967 by Carlo D'Angiò, playing from popular canzone napoletana to american spirituals.. "
         },
@@ -85,9 +85,9 @@
             "image": "img/JesusChristSuperstar.jpg",
             "score": "7/10",
             "about": {
-                "relesedAlbums": 1000,
-                "time": "65 minuts",
-                "trackNumbers": 14
+                "Sprzedane płyty": 1000,
+                "Czas": "65 minuts",
+                "Piosenki": 14
             },
             "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui eveniet nam reiciendis odit totam nostrum quam suscipit repellendus pariatur delectus!"
         },
@@ -98,9 +98,9 @@
             "image": "img/emerson.jpg",
             "score": "7/10",
             "about": {
-                "relesedAlbums": 1000,
-                "time": "65 minuts",
-                "trackNumbers": 14
+                "Sprzedane płyty": 1000,
+                "Czas": "65 minuts",
+                "Piosenki": 14
             },
             "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui eveniet nam reiciendis odit totam nostrum quam suscipit repellendus pariatur delectus!"
         }
@@ -112,9 +112,9 @@
             "image": "img/pingFloyd.jpg",
             "score": "7/10",
             "about": {
-                "relesedAlbums": 2000,
+                "Sprzedane płyty": 2000,
                 "time": "44 minuts",
-                "trackNumbers": 10
+                "Piosenki": 10
             },
             "description": "Please check carefully the existing vinyl releases before adding new releases to the database to avoid duplicates. There are many slightly different versions of this release, and especially the reissues / reprints with black Columbia labels from late 60's to early 70's are hard to tell apart. "
         },
@@ -125,9 +125,9 @@
             "image": "img/NCCP.jpg",
             "score": "7/10",
             "about": {
-                "relesedAlbums": 20000,
+                "Sprzedane płyty": 20000,
                 "time": "45 minuts",
-                "trackNumbers": 12
+                "Piosenki": 12
             },
             "description": "The Nuova Compagnia di Canto Popolare was originally a folk group, formed in Naples in 1967 by Carlo D'Angiò, playing from popular canzone napoletana to american spirituals.. "
         },
@@ -138,9 +138,9 @@
             "image": "img/JesusChristSuperstar.jpg",
             "score": "7/10",
             "about": {
-                "relesedAlbums": 1000,
+                "Sprzedane płyty": 1000,
                 "time": "65 minuts",
-                "trackNumbers": 14
+                "Piosenki": 14
             },
             "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui eveniet nam reiciendis odit totam nostrum quam suscipit repellendus pariatur delectus!"
         },
@@ -151,9 +151,9 @@
             "image": "img/emerson.jpg",
             "score": "7/10",
             "about": {
-                "relesedAlbums": 1000,
-                "time": "65 minuts",
-                "trackNumbers": 14
+                "Sprzedane płyty": 1000,
+                "Czas": "65 minuts",
+                "Piosenki": 14
             },
             "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui eveniet nam reiciendis odit totam nostrum quam suscipit repellendus pariatur delectus!"
         }

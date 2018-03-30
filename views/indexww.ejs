@@ -14,26 +14,26 @@
             <!-- Albums of the year -->
             <header id="albumns">
                 <h4>Najlepsze jebie roku <%= year %></h4>
-                <div class="albums row">
+                <section class="albums row">
                    <% albumData.forEach(function(item){ %>
-                    <div class="col s3">
+                    <div class="col s3 album">
                             <div class="card">
                                 <div class="card-image z-depth-3">
                                     <img src=" <%= item["image"] %> " />
                                     <div class="card-title">
                                         <%= item["title"] %>
                                         <br>
-                                        <strong>7/10</strong>
-                                        <a href="">More</a>
+                                        <strong><span>9</span>/10</strong>
+                                        <a href="">Więcej</a>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     <% }) %>
-                </div>
+                </section>
             </header>
             <!-- Details of album -->
-            <div class="row" id="details">
+            <section class="row" id="details">
                 <div class="col s8 ">
                     <div class="card-content z-depth-1">
                         <h5 class="title">Album miesiąca</h5>
@@ -59,7 +59,7 @@
                         dolorem repudiandae animi qui quasi saepe voluptatibus enim, quia explicabo cum veniam.
                     </div>
                 </div>
-            </div>
+            </section>
         </div>
         <script src="js/main.js"></script>
     </section>
