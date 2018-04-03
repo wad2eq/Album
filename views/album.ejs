@@ -44,20 +44,20 @@
             </header>
             <!-- Details of album -->
             <div class="row wrapper">
-                <article class="col s12 m9 l8">
+                <article class="col s12 m9 l8 play">
                     <div class="main">
                         <h2 class="title">Album miesiąca</h2>
                         <div class="row d-flex" id="details">
                             <div class="col s12 m5 r-m-l">
                                 <p><%= albumData[0]["description"] %></p>
                             </div>
-                            <div class="col s12 m7 offset-l1 offset-s0">
-                                <img src="<%= albumData[0]["image"] %> " alt="<%= albumData[0]["title"] %> - <%= albumData[0]["band"] %>">
+                            <div class="col s12 m7 offset-l1 offset-s0 ">
+                                <img  src="<%= albumData[0]["image"] %> " alt="<%= albumData[0]["title"] %> - <%= albumData[0]["band"] %>">
                             </div>
                             <div class="col s12 m3 l4" id="ciekawostki">
                                     <strong>Ciekawostki:</strong>
                                 <% Object.keys(albumData[0]["about"]).forEach(function(item){ %>
-                                    <div><span><%= item %>:</span><strong><%= albumData[0]["about"][item] %></strong></div>
+                                    <div><span><%= item %>: </span><b><%= albumData[0]["about"][item] %></b></div>
                                <% }); %>
                             </div>
                         </div>

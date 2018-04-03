@@ -7,6 +7,7 @@ html {
 
 body {
     color: rgba(153, 153, 153, 25);
+    background: #f8fafb;
 }
 
 p {
@@ -14,7 +15,7 @@ p {
 }
 
 .container {
-    max-width: 1100px;
+    max-width: 1200px;
 }
 
 .wrapper {
@@ -90,7 +91,7 @@ img {
     box-shadow: 0 0 2px #444;
 }
 
-.card-content {
+.card-content,#slide-out,article {
     background: #fff;
 }
 
@@ -200,18 +201,21 @@ img {
 }
 
 #ciekawostki {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     text-align: center;
 }
-
+#ciekawostki > strong{
+    font-size: 1.2rem;
+    font-weight: 700;
+}
 #ciekawostki>div {
     margin: 1rem 0;
 }
 
-#ciekawostki>strong {
-    display: block;
+#ciekawostki b {
     padding-bottom: .4em;
-    font-weight: 700;
+    font-weight: 500;
+    color:#000;
 }
 
 /*
@@ -221,7 +225,7 @@ img {
 */
 
 ul.collection {
-    margin: 0;
+    margin: -22px 0;
     padding: 0 0 20px 0;
     animation: opacity 2s;
     transition: all .3s linear;
@@ -231,14 +235,28 @@ ul.collection {
 
 ul.collection li.collection-item {
     font-size: 1.4rem;
+    transition: all .2s ease-in;
+    z-index: 1;
 }
-
+ul.collection li.collection-item:hover{
+    position: relative;
+    z-index:3;
+    cursor: pointer;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);    
+}
 #show {
     float: right;
+    margin-top: 3rem;
     padding: .5rem 2rem;
     font-size: 1rem;
     text-transform: uppercase;
     border: none;
+    transition: all .2s ease-in; 
+    
+}
+#show:hover{
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);    
+    background: #f7f7f7;
 }
 
 #show:focus {
@@ -333,6 +351,7 @@ ul.collection li.collection-item {
     }
     #slide-out .collection {
         overflow: scroll;
+        margin: 0;
         padding: 0;
         border: none;
     }

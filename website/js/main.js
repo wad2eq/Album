@@ -37,7 +37,9 @@ function loadAlbum() {
     link.forEach(element => {
         element.addEventListener('click', (a) => {
             a.preventDefault();
-            if (windowWitdh <= 600) {
+            console.log("to jest target");
+            console.dir(a.target);
+            if (windowWitdh <= 600 && a.target.className !== "but") {
                 d = !d;
                 showAlbumLinks(0);
             }
