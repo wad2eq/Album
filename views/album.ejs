@@ -1,13 +1,15 @@
 <!DOCTYPE html>
-<html>
+<html lang="pl">
 <head>
     <meta charset="UTF-8" />
+    <title>Best albums</title>
     <link rel="stylesheet" href="css/materialize.css">
     <link rel="stylesheet" href="css/main.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Raleway:100,200,300,400,700&amp;subset=latin-ext" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700,900&amp;subset=cyrillic,cyrillic-ext" rel="stylesheet">
     <script src="js/jquery.min.js"></script>
-    <script src="./js/materialize.js"></script>
+    <!-- <script src="./js/materialize.js"></script> -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 </head>
 
@@ -25,7 +27,7 @@
                                     <img src=" <%= item["image"] %>" alt="<%= item["band"] - item["title"] %>" />
                                     <div class="card-title">
                                         <h4><%= item["title"] %></h4>
-                                        <div class="d-flex-2col" id="score">
+                                        <div class="d-flex-2col score">
                                             <strong><span>9,4</span>/10</strong>
                                             <a class='but' href="http://localhost:3000/<%= year %>/<%= item["id"] %>">Więcej</a>
                                         </div>
@@ -41,7 +43,7 @@
                 </section>
             </header>
             <!-- Details of album -->
-            <section class="row wrapper">
+            <div class="row wrapper">
                 <article class="col s12 m9 l8">
                     <div class="main">
                         <h2 class="title">Album miesiąca</h2>
@@ -62,10 +64,10 @@
                     </div>
                 </article>
                 <!-- Best albums -->
-                <sidebar class="col s12 m3 l4"  id="slide-out">
+                <aside class="col s12 m3 l4"  id="slide-out">
                     <div class="card-content ">
                        <h2 class="title sub-title">Najlepsze utwory <span>wg czytelników</span></h2>
-                       <ul class="collection">
+                       <ul class="collection" id="albumList">
                             <% for(var i=0; i< bandList.length; i++){  %>
                                 <li class="collection-item hidden">
                                    <a href="http://localhost:3000/<%= bandList[i].year %>/<%= bandList[i].id %>"><%= i+1 %>.  <%- bandList[i].band %></a>
@@ -73,9 +75,10 @@
                             <% } %>
                        </ul>
                        <button id="show" class="but">Zpobacz pełną listę</button>
+                       <button id="showMobile" class="btn-floating red hidden"><i class="material-icons">add</i></button>
                     </div>
-                </side>
-            </section>
+                </aside>
+            </div>
         </div>
         <script src="js/main.js"></script>
     </div>
